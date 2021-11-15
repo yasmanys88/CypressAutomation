@@ -1,0 +1,28 @@
+{
+  "name": "yaydootest",
+  "version": "1.0.0",
+  "description": "Execution of the automation test: Buy a dress and two T-shirts",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasmanys88/YaydooTest.git"
+  },
+  "keywords": [
+    "QA",
+    "Automation",
+    "Cypress",
+    "Yaydoo"
+  ],
+  "author": "Yasmany Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasmanys88/YaydooTest/issues"
+  },
+  "homepage": "https://github.com/yasmanys88/YaydooTest#readme",
+  "devDependencies": {
+    "cypress": "^9.0.0"
+  }
+}
