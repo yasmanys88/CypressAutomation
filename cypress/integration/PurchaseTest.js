@@ -10,5 +10,18 @@ describe("Purchase Test", () => {
       cy.get(home.homeTitle).should('contain','My account')
     })
 
+    cy.fixture('searchBox').then((searchbox)=>{
+        cy.get(searchbox.searchInput).type('dress')
+        cy.get(searchbox.searchBtn).click()
+    })
+
+    cy.fixture('search').then((search)=>{
+        cy.get(search.pageTitle).should('contain','dress')
+        cy.get(search.firtsResult).should('contain','In stock')
+      })
+
+
+
+
   });
 });
