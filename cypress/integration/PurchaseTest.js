@@ -25,9 +25,11 @@ describe("Purchase Test", () => {
         cy.get(layercart.continueBtn).click()
     })
     cy.fixture('blockTop').then((blocktop)=>{
-      cy.get(blocktop.cart_quantity).should('contain','1')
-
+        cy.get(blocktop.cart_quantity).should('contain','1')
     })
+    cy.fixture('categories').then((categories)=>{
+      cy.get(categories.tshirtlink).click()
+  })
 
 
   });
