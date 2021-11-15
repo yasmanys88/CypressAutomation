@@ -10,7 +10,7 @@ describe("Purchase Test", () => {
       cy.get(home.homeTitle).should('contain','My account')
     })
 
-    cy.fixture('searchBox').then((searchbox)=>{
+    cy.fixture('blockTop').then((searchbox)=>{
         cy.get(searchbox.searchInput).type('dress')
         cy.get(searchbox.searchBtn).click()
     })
@@ -24,7 +24,10 @@ describe("Purchase Test", () => {
         cy.get(layercart.titleCartProduct).should('contain','Product successfully added to your shopping cart')
         cy.get(layercart.continueBtn).click()
     })
+    cy.fixture('blockTop').then((blocktop)=>{
+      cy.get(blocktop.cart_quantity).should('contain','1')
 
+    })
 
 
   });
