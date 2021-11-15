@@ -1,0 +1,6 @@
+{
+  "loginLink": ".login",
+  "mailInput": "#email",
+  "passInput": "#passwd",
+  "sigInBtn": "#SubmitLogin > span"
+}
