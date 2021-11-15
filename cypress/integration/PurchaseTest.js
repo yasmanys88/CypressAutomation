@@ -18,8 +18,12 @@ describe("Purchase Test", () => {
     cy.fixture('search').then((search)=>{
         cy.get(search.pageTitle).should('contain','dress')
         cy.get(search.firtsResult).should('contain','In stock')
+        cy.get(search.addToCard).click()
     })
-
+    cy.fixture('layerCart').then((layercart)=>{
+        cy.get(layercart.titleCartProduct).should('contain','Product successfully added to your shopping cart')
+        cy.get(layercart.continueBtn).click()
+    })
 
 
 

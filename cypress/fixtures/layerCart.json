@@ -1,0 +1,5 @@
+{
+   "titleCartProduct":".layer_cart_product > h2",
+   "continueBtn":".continue > span",
+   "checkoutBtn":".button-container > .button-medium > span"
+}

@@ -1,5 +1,5 @@
 {
     "pageTitle":".lighter",
     "firtsResult":":nth-child(1) > .product-container > .right-block > .availability > .available-now",
-    "addToCard":""
+    "addToCard":":nth-child(1) > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span"
 }

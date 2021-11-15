@@ -1,0 +1,5 @@
+{
+"womenLink":".sf-menu > :nth-child(1) > [href=\"http://automationpractice.com/index.php?id_category=3&controller=category\"]",
+"dressesLink":".sf-menu > :nth-child(2) > .sf-with-ul",
+"tshirtlink":".sf-menu > :nth-child(3) > a"
+}
