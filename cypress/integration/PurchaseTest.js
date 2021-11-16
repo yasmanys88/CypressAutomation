@@ -33,8 +33,16 @@ describe("Purchase Test", () => {
     cy.fixture('tshirts').then((tshirt)=>{
       cy.get(tshirt.title).should('contain','T-shirts')
       cy.get(tshirt.available).should('contain','In stock')
-      
+      cy.get(tshirt.moreBtn).click()
     })
+    cy.fixture('product').then((products)=>{
+      cy.get(products.plusBtn).click()
+      cy.get(products.addtocartBtn).click()
+    })
+    cy.fixture('layerCart').then((layercart)=>{
+      cy.get(layercart.titleCartProduct).should('contain','Product successfully added to your shopping cart')
+      cy.get(layercart.checkoutBtn).click()
+  })
 
   });
 });

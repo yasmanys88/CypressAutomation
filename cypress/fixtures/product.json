@@ -1,0 +1,5 @@
+{
+  "quantityInput": "#quantity_wanted",
+  "plusBtn": ".button-plus > span",
+  "addtocartBtn": "#add_to_cart > .exclusive"
+}
