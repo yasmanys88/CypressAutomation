@@ -1,6 +1,5 @@
 {
     "searchInput":"#search_query_top",
     "searchBtn":"#searchbox > .btn",
-    "cart_quantity":"[title=\"View my shopping cart\"] > .ajax_cart_quantity"
-    
+    "cart_quantity":"[title=\"View my shopping cart\"] > .ajax_cart_quantity" 
 }

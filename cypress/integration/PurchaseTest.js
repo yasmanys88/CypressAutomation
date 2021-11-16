@@ -5,7 +5,12 @@ before(() => {
 });
 describe("Purchase Test", () => {
   it("Purchase some Dress and T-Shirt", () => {
-    loginPage.loginAction("yasmanys88@gmail.com", "d12r57dd");
+    cy.fixture("loginLocator").then((login) => {
+      cy.get(login.loginLink).click();
+      cy.get(login.mailInput).type("yasmanys88@gmail.com");
+      cy.get(login.passInput).type("d12r57dd");
+      cy.get(login.sigInBtn).click();
+    });
 
     cy.fixture("homePage").then((home) => {
       cy.get(home.homeTitle).should("contain", "My account");
@@ -43,6 +48,7 @@ describe("Purchase Test", () => {
       cy.get(tshirt.available).should("contain", "In stock");
       cy.get(tshirt.moreBtn).click();
     });
+    
     cy.fixture("product").then((products) => {
       cy.get(products.plusBtn).click();
       //cy.get(products.plusBtn).type('2') /* Another way  */
@@ -70,9 +76,11 @@ describe("Purchase Test", () => {
       );
       cy.get(sc.backtoordersBtn).click();
     });
-
     
-
+    cy.fixture("loginLocator").then((login) => {
+      cy.get(login.logoutLink).click();
+    });
 
   });
+
 });

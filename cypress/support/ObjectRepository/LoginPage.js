@@ -9,5 +9,11 @@ class LoginPage{
         })
     }
 
+    logoutAction =()=>{
+        cy.fixture('loginLocator').then((login)=>{
+            cy.get(login.logoutLink).click();
+        })
+    }
+
 }
 export default new LoginPage();
