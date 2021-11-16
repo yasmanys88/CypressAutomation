@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
-import loginPage from "../support/ObjectRepository/LoginPage";
-before(() => {
-  cy.visit("/");
-});
+
 describe("Purchase Test", () => {
+  beforeEach(() => {
+    cy.visit("/");
+  });
   it("Purchase some Dress and T-Shirt", () => {
     cy.fixture("loginLocator").then((login) => {
       cy.get(login.loginLink).click();
@@ -26,7 +26,7 @@ describe("Purchase Test", () => {
       cy.get(search.firtsResult).should("contain", "In stock");
       cy.get(search.addToCard).click();
     });
-    cy.wait(10000);
+    //cy.wait(8000);
     cy.fixture("layerCart").then((layercart) => {
       cy.get(layercart.titleCartProduct).should(
         "contain",
@@ -54,7 +54,7 @@ describe("Purchase Test", () => {
       //cy.get(products.plusBtn).type('2') /* Another way  */
       cy.get(products.addtocartBtn).click();
     });
-    cy.wait(10000);
+    //cy.wait(8000);
     cy.fixture("layerCart").then((layercart) => {
       cy.get(layercart.titleCartProduct).should(
         "contain",
@@ -79,6 +79,7 @@ describe("Purchase Test", () => {
 
     cy.fixture("loginLocator").then((login) => {
       cy.get(login.logoutLink).click();
+      //cy.wait(8000);
       cy.get(login.pageLogin).should("contain", "Authentication");
     });
   });
