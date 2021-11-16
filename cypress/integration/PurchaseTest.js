@@ -37,6 +37,7 @@ describe("Purchase Test", () => {
     })
     cy.fixture('product').then((products)=>{
       cy.get(products.plusBtn).click()
+      //cy.get(products.plusBtn).type('2') /* Another way  */
       cy.get(products.addtocartBtn).click()
     })
     cy.fixture('layerCart').then((layercart)=>{
