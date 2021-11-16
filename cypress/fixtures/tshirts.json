@@ -1,0 +1,5 @@
+{
+    "title":".cat-name",
+    "moreBtn":".lnk_view > span",
+    "available":".available-now"
+}

@@ -29,8 +29,12 @@ describe("Purchase Test", () => {
     })
     cy.fixture('categories').then((categories)=>{
       cy.get(categories.tshirtlink).click()
-  })
-
+    })
+    cy.fixture('tshirts').then((tshirt)=>{
+      cy.get(tshirt.title).should('contain','T-shirts')
+      cy.get(tshirt.available).should('contain','In stock')
+      
+    })
 
   });
 });
