@@ -26,7 +26,7 @@ describe("Purchase Test", () => {
       cy.get(search.firtsResult).should("contain", "In stock");
       cy.get(search.addToCard).click();
     });
-
+    cy.wait(10000);
     cy.fixture("layerCart").then((layercart) => {
       cy.get(layercart.titleCartProduct).should(
         "contain",
@@ -48,13 +48,13 @@ describe("Purchase Test", () => {
       cy.get(tshirt.available).should("contain", "In stock");
       cy.get(tshirt.moreBtn).click();
     });
-    
+
     cy.fixture("product").then((products) => {
       cy.get(products.plusBtn).click();
       //cy.get(products.plusBtn).type('2') /* Another way  */
       cy.get(products.addtocartBtn).click();
     });
-
+    cy.wait(10000);
     cy.fixture("layerCart").then((layercart) => {
       cy.get(layercart.titleCartProduct).should(
         "contain",
@@ -76,11 +76,10 @@ describe("Purchase Test", () => {
       );
       cy.get(sc.backtoordersBtn).click();
     });
-    
+
     cy.fixture("loginLocator").then((login) => {
       cy.get(login.logoutLink).click();
+      cy.get(login.pageLogin).should("contain", "Authentication");
     });
-
   });
-
 });
