@@ -1,0 +1,8 @@
+{
+"checkoutBtn":".cart_navigation > .button > span",
+"checkboxShiping":"#cgv",
+"paybyCheck":".cheque",
+"alerta":".alert",
+"backtoordersBtn":".button-exclusive",
+"boxOrder":".box"
+}
